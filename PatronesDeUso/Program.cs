@@ -36,6 +36,16 @@ namespace PatronesDeUso
 
             Console.WriteLine(otrococina.PizzaPreparada.Tamaño + "\r\n" + otrococina.PizzaPreparada.Salsa);
 
+            Console.WriteLine("\r\n  \r\n  \r\n  //////////////////////////////////////////////\r\n ");
+
+            //Patron de uso facade
+
+            Subsitema1 subsitema1 = new Subsitema1();
+            Subsitema2 subsitema2 = new Subsitema2();
+
+            Facade facade = new Facade(subsitema1, subsitema2);
+
+            Cliente.ClientCode(facade);
 
             Console.WriteLine("\r\n Toque para salir");
             Console.ReadLine();
